@@ -1,0 +1,33 @@
+.hero-slider {
+  background-color: #987654;
+  display: grid;
+  justify-content: start;
+  align-items: end;
+}
+
+.hero-slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.hero-slider__pagination {
+  position: relative;
+  z-index: 3;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-bottom: 40px;
+  margin-left: clamp(15px, (100vw - 290px) / 2, 239px);
+
+  @media (min-width: $tablet-width) {
+    margin-left: calc((100vw - 678px) / 2);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-left: calc((100vw - 1200px) / 2 + 605px);
+    margin-bottom: 92px;
+  }
+}

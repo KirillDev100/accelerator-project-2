@@ -1,4 +1,9 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import './navigation-toggle';
+import './hero-slider';
+import './tours-slider';
+import './training-slider';
+
+const titles = document.querySelectorAll('.title');
+titles.forEach((title) => {
+  title.dataset.text = title.textContent;
+});

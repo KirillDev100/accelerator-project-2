@@ -1,0 +1,244 @@
+.training {
+  padding: 20px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 120px;
+  }
+}
+
+.training p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 820px;
+    margin-bottom: 56px;
+  }
+}
+
+
+.training__title {
+  margin: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.training .training__slider {
+  display: grid;
+  margin-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.training__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 102px;
+    padding-top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 20.5px;
+    padding-top: 2.5px;
+  }
+}
+
+.training__process {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: calc(100% - 22px);
+    position: absolute;
+    left: 6px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background-color: $extra-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 272px);
+    justify-content: space-between;
+    row-gap: 104px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 253.33px);
+    justify-content: start;
+    padding: 8px 0;
+
+    &::after {
+      display: block;
+      width: calc(100% - 34px);
+      height: 2px;
+      bottom: 14px;
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.training__process-item {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  display: flex;
+  gap: 9px;
+  position: relative;
+  padding-left: 29px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 100%;
+    flex-shrink: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $extra-color;
+    position: absolute;
+    left: 0;
+    top: 11px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      top: auto;
+      bottom: 0;
+      left: 20px;
+    }
+  }
+
+  &--moving::before {
+    background-image: url("/__spritemap#sprite-map-icon-view");
+  }
+
+  &--equipment::before {
+    background-image: url("/__spritemap#sprite-boots-icon-view");
+  }
+
+  &--ecology::before {
+    background-image: url("/__spritemap#sprite-pine-tree-icon-view");
+  }
+
+  &--ecology::after {
+    @media (min-width: $desktop-width) {
+      left: 0;
+    }
+  }
+
+  &--mountains::before {
+    background-image: url("/__spritemap#sprite-mountain-icon-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    gap: 10px;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &--mountains {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px 10px;
+    padding-top: 0;
+
+    &--mountains {
+      grid-column: unset;
+      grid-row: unset;
+    }
+  }
+}
+
+.training__process-item br {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.training__process-item--ecology br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.training__process-item--mountains br {
+  &:first-of-type {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:first-of-type {
+      display: block;
+    }
+  }
+}

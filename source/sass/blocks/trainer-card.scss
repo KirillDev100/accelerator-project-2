@@ -1,0 +1,90 @@
+.trainer-card {
+  padding: 15px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 24px;
+  box-sizing: border-box;
+  outline: 1px solid rgba(2, 102, 193, 0.1);
+  outline-offset: -1px;
+}
+
+
+.trainer-card picture {
+  grid-column: 1/3;
+}
+
+.trainer-card h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -0.5px;
+  margin-top: 0.5px;
+}
+
+.trainer-card p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  grid-column: 1/3;
+  margin: 0;
+  width: 100%;
+}
+
+.trainer-card__image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.trainer-card__vk {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid rgba(45, 56, 63, 0.3);
+  outline-offset: -1px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 8px;
+    background-color: $base-color;
+    mask-image: url("/__spritemap#sprite-vk-icon-view");
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:hover {
+    outline-color: $base-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $extra-color;
+
+    &::after {
+      background-color: #ffffff;
+    }
+  }
+
+  &:disabled {
+    outline-color: $base-color;
+    opacity: 30%;
+
+    &::after {
+      background-color: $base-color;
+    }
+  }
+}

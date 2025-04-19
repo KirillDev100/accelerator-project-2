@@ -1,0 +1,64 @@
+.title {
+  color: $base-color;
+  font-family: $montserrat;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  display: grid;
+
+  &::before {
+    font-size: 26px;
+    line-height: 26px;
+    content: attr(data-text);
+    display: block;
+    width: 100%;
+    opacity: 3%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-bottom: -3px;
+    margin-top: 3px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+
+    &::before {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: -4.5px;
+      margin-top: 4.5px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+
+    &::before {
+      font-size: 55px;
+      line-height: 55px;
+      margin-bottom: -6px;
+      margin-top: 6px;
+    }
+  }
+}
+
+.title span {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 2;
+  margin-top: 18.5px;
+  margin-bottom: -2.5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 23px;
+    margin-bottom: -4px;
+  }
+}
